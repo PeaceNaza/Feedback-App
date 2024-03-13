@@ -15,7 +15,7 @@ const reviewData = [
   id: 3,
   rating: 7,
   text: "What specific aspects did you dislike about our product/service?"
-},
+}
 
 ] 
 

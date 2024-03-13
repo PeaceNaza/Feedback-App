@@ -6,12 +6,12 @@ import ReviewStats from "./Components/ReviewStats"
 
 function App() {
   const [review, setReview] = useState(data)
-  //fuctio to delete a review
-  //tis function collects a parameter called (id) filter troug te array as "item"
+  //function to delete a review
+  //this function collects a parameter called (id) filter through the array as "item"
   const deleteReview = (id) => {
     if(window.confirm("Are you sure you want to delete this review?")) {
       setReview(review.filter((item) => item.id !== id))
-  //dont display d curr item dat is passed, display d oters 
+  //don't display the curr item that is passed, display the others 
     }
   } 
 
