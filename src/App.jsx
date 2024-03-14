@@ -3,6 +3,7 @@ import Header from "./Components/Layout/Header"
 import data from "./data/reviewData"
 import ReviewList from "./Components/ReviewList"
 import ReviewStats from "./Components/ReviewStats"
+import ReviewForm from "./Components/ReviewForm"
 
 function App() {
   const [review, setReview] = useState(data)
@@ -18,6 +19,7 @@ function App() {
   return (
     <>
       <Header text="Review Application" />
+      <ReviewForm />
 
       <div className="container">
         <ReviewStats reviews={review} />

@@ -7,7 +7,7 @@ function ReviewStats({reviews}) {
 
   return (
     <>
-      <div className="review-stats">
+      <div sdhclassName="review-stats">
       <p>{reviews.length} reviews</p>
       
       <p>Average: {isNaN(average) ? 0 : average} </p>
