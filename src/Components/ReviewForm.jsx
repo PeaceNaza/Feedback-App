@@ -1,4 +1,5 @@
 import { useState } from "react" 
+import Button from "./Layout/Button"
 
 function ReviewForm() {
   const [text, setText] = useState("")
@@ -17,7 +18,10 @@ function ReviewForm() {
            <div className="input-group">
             {/*writing data into the state and updating the value of the state*/}
             <input type="text" value={text} placeholder="write your review here" onChange={textHandler} />
-            <button type="submit">Submit</button>
+
+          <Button type="submit" variant="secondary">
+              Submit
+          </Button>
            </div>
         </form>
       </div>
@@ -28,3 +32,5 @@ function ReviewForm() {
 }
 
 export default ReviewForm
+
+
