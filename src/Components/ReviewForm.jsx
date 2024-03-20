@@ -58,7 +58,7 @@ function ReviewForm({handleAdd}) {
     <div className="container">
       <div className="card">
         <form onSubmit={formSubmit}>
-         <h3>Kindly drop a review for our service you just experienced.</h3>
+         <h3 className="head">Kindly drop a review for our service you just experienced.</h3>
          <Rating ratingState={(rating) => setRating(rating)} />
          <br /><br />
            <div className="input-group">
