@@ -1,4 +1,5 @@
-import { useState } from "react" 
+import ReviewContext from "../context/ReviewContext"
+import { useState, useContext } from "react" 
 import Button from "./Layout/Button"
 import Rating from "./Rating"
 
@@ -9,7 +10,8 @@ const spanStyle = {
 } 
 
 // eslint-disable-next-line react/prop-types
-function ReviewForm({handleAdd}) {
+function ReviewForm() {
+  const {AddReview} = useContext(ReviewContext)
   //state for input text
   const [text, setText] = useState("")
 
@@ -47,7 +49,7 @@ function ReviewForm({handleAdd}) {
         rating
       }
       
-      handleAdd(newReview)
+      AddReview(newReview)
       setText("")
     }
   } 
