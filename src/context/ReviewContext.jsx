@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { v4 as uuid } from "uuid"
 
+const base_url = import.meta.env.VITE_BASE_URL
 const ReviewContext = createContext()
 
 // eslint-disable-next-line react/prop-types
@@ -10,14 +11,14 @@ export const ReviewProvider = ({children}) => {
    const [loading, setLoading] = useState(true)
 
    useEffect(() => {
-    fetch("http://localhost:5000/review")
+    fetch(`${base_url}/review`)
     .then((res) => res.json())
     .then((data) => {
      // set a delay before updating the state
      setTimeout(() => {
       setReview(data)
       setLoading(false)
-    }, 3000) //delay in 3 seconds
+    }, 2000) //delay in 3 seconds
   })
   .catch((error) => {
     console.log(error)

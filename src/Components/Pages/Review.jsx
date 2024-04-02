@@ -17,7 +17,7 @@ function Review() {
               <ReviewStats />
               <ReviewList />
           </div>  
-
+          {import.meta.env.VITE_SOME_KEY}
           <div className="about-link">
             <Link to="/">
               <FaHouseDamage size={40} />
