@@ -16,7 +16,7 @@ function ReviewList() {
   }
   return loading ? <Spinner /> : (
     <>
-       <div>
+       <div className="container1">
         {/**looping through the array of data */}
         {review.map((item) => (
           <div key={item.id}>

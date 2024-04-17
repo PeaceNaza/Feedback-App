@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "jsx": "react",
+    "types": ["jest"]
+  },
+  "include": ["src/**/*", "src/App.test.jsx"]
+}

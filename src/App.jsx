@@ -17,10 +17,6 @@ function App() {
         <Route path="/review" element={<Review />} />
       </Routes>
     </Router>
-
-      
-
-      
     </>
   )
 }

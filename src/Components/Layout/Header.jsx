@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 const header = {
   backgroundColor: "#ff6a95",
@@ -8,7 +9,7 @@ function Header({text}) {
   return (
     <>
       <header style={header} className="head">
-        <h3>{text}</h3>
+        <h3 title="head" data-testid="t3048">{text}</h3>
       </header>
     </>
   )

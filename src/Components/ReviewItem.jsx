@@ -12,8 +12,8 @@ function ReviewItem({review}) {
 
   return (
     <>
-    <div className="container1">
-    <div className="card">
+    <div className="container">
+    <div className="card2">
         <div className="num-display">{review.rating}</div>
         <div>{review.text}</div>
         <button className="close" onClick={()=> deleteReview(review.id)}>
