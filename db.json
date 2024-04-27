@@ -1,24 +1,19 @@
 {
-  "review": [
+  "posts": [
     {
-      "text": "I absolutely love the products from [Beauty Company]! The quality is outstanding, and they always leave my skin feeling fresh and rejuvenated. I highly recommend their skincare line!",
-      "rating": 5,
-      "id": 1
-    },
-    {
-      "text": "I recently tried new foundation, and I must say it's pretty impressive! It provides great coverage and lasts throughout the day",
-      "rating": 4,
-      "id": 2
-    },
-    {
-      "text": "While their shampoo and conditioner smell amazing and make my hair feel soft, I've noticed that my hair gets greasy faster than usual. It might not be the best fit for my hair type ",
-      "rating": 3,
-      "id": 3
-    },
-    {
-      "text": "The colors were not as vibrant as I expected, and they didn't blend easily. I was disappointed with the overall quality ",
-      "rating": 10,
-      "id": 4
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
     }
-  ]
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
