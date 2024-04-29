@@ -1,32 +1,22 @@
-import { useContext } from "react"
-import ReviewContext from "../context/ReviewContext"
-import ReviewItem from "./ReviewItem"
-import Spinner from "./Layout/Spinner"
+/* eslint-disable react/prop-types */
+import ReviewItem from "./ReviewItem";
 
-//looping through each item from data on app component "review"
-
-// eslint-disable-next-line react/prop-types
-function ReviewList() { 
-  const {review, loading} = useContext(ReviewContext)
-
-  if (!loading && (!review || review.length === 0)) {
-    return <div className="container">
-              <p>No review yet!</p>
-          </div>
+function ReviewList({ reviews, deleteReview }) {
+  if (!reviews || reviews.length === 0) {
+    return <p>No review yet!</p>;
   }
-  return loading ? <Spinner /> : (
+
+  return (
     <>
-       <div className="container1">
-        {/**looping through the array of data */}
-        {review.map((item) => (
+      <div className="flex-item">
+        {reviews.map((item) => (
           <div key={item.id}>
-            <ReviewItem review={item} />
+            <ReviewItem review={item} deleteReview={deleteReview} />
           </div>
         ))}
-      
-       </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default ReviewList 
+export default ReviewList;

@@ -1,30 +1,18 @@
-/*eslint-disable react/prop-types */
-//handling the card display
-import { useContext } from "react"
-import ReviewContext from "../context/ReviewContext"
-import { FaTimes } from "react-icons/fa"
+/* eslint-disable react/prop-types */
+import { FaTimes } from "react-icons/fa";
 
-
-// eslint-disable-next-line react/prop-types
-function ReviewItem({review}) { 
-  
-  const {deleteReview} = useContext(ReviewContext)
-
+function ReviewItem({ review, deleteReview }) {
   return (
-    <>
-    <div className="container">
-    <div className="card2">
+    <div>
+      <div className="review-card">
         <div className="num-display">{review.rating}</div>
-        <div>{review.text}</div>
-        <button className="close" onClick={()=> deleteReview(review.id)}>
+        <div className="review-text">{review.text}</div>
+        <button className="close" onClick={() => deleteReview(review.id)}>
           <FaTimes />
         </button>
-     </div>
-
+      </div>
     </div>
-     
-    </> 
-  )
+  );
 }
 
-export default ReviewItem 
+export default ReviewItem;

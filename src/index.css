@@ -21,7 +21,6 @@ ul {
   max-width: 768px;
   margin: auto;
   padding: 0 20px;
-  
 }
 
 header {
@@ -30,15 +29,18 @@ header {
   /* display: flex; */
   justify-content: space-between;
   align-items: center;
-  margin: 0px;
+  margin: 10px;
   padding: 10px;
   text-align: center;
 }
+
+
 .head {
   font-size: large;
   text-align: center;
   color: #202142;
 }
+
 .card {
   background-color: #fff;
   color: #333;
@@ -46,19 +48,21 @@ header {
   padding: 40px 50px;
   margin: 20px 0;
   position: relative;
-  
 }
-.card2 {
+
+.review-card {
   background-color: #fff;
   color: #333;
   border-radius: 15px;
   padding: 40px 50px;
   margin: 20px 0;
   position: relative;
-  width: 100%;
-  max-height: 100px;
-  overflow-y: auto;
 }
+
+.review-text {
+  width: 250px;
+}
+
 .card.reverse {
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
@@ -68,7 +72,6 @@ header {
   font-size: 22px;
   font-weight: 600;
   text-align: center;
-
 }
 
 .rating {
@@ -114,7 +117,7 @@ header {
   opacity: 0;
 }
 
-[type='radio']:checked ~ label {
+[type='radio']:checked~label {
   background: #ff6a95;
   color: #fff;
 }
@@ -230,6 +233,39 @@ input:focus {
   margin: 10px 0;
 }
 
+/* All Reviews Page Styles */
+.all-reviews-container {
+  padding: 10px 5%;
+
+}
+
+.go-to {
+  background: #ff6a95;
+  border: none;
+  padding: 20px 14px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: auto;
+  transition: 850ms;
+}
+
+.flex-item {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 @media (max-width: 600px) {
   .rating li {
     margin: 10px 3px;
@@ -246,50 +282,18 @@ input:focus {
   .input-group input {
     width: 80%;
   }
-  
+
+  .container1 {
+    flex-wrap: wrap;
+    gap: 0px;
+    margin-top: 0px;
+    transition: 850ms;
+  }
 }
 
 @media (max-width: 380px) {
   .review-text {
     width: 150px;
     transition: 850ms;
-
   }
-  
-}
-.container1 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  transition: 850ms;
-} 
-
-/*CSS Loader*/
-.custom-loader {
-  width: 70px;
-  height: 70px;
-  background:
-    radial-gradient(farthest-side,#FF6996 90%,#0000) center/16px 16px,
-    radial-gradient(farthest-side,#911F4C   90%,#0000) bottom/12px 12px;
-  background-repeat: no-repeat;
-  animation: s7 2s infinite linear;
-  position: relative;
-}
-.custom-loader::before {    
-  content:"";
-  position: absolute;
-  width:8px;
-  height:8px;
-  inset:auto 0 16px;
-  margin: auto;
-  background:#4BED97;
-  border-radius: 50%;
-  transform-origin: 50% calc(100% + 10px);
-  animation:inherit;
-  animation-duration: 1s;
-}
-
-
-@keyframes s7 { 
-  100%{transform: rotate(1turn)}
 }
