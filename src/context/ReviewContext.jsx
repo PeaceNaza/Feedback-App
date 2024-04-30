@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
-
+import { createContext, useContext, useState } from "react";
 
 const ReviewsContext = createContext();
 
+export const useReviews = () => {
+  return useContext(ReviewsContext);
+};
 
 export const ReviewsProvider = ({ children }) => {
   const [reviews, setReviews] = useState([]);

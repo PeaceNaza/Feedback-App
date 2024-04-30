@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import ReviewList from "../ReviewList";
 import { FaHouseDamage } from "react-icons/fa";
 
@@ -14,8 +14,6 @@ const AllReviews = () => {
       console.error("Error loading data:", error);
     }
   };
-
-
 
   // function to delete a review
   const deleteReview = (id) => {

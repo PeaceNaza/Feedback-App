@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Button from "../Layout/Button"
 import { useNavigate, Link } from "react-router-dom"
 import { FaQuestionCircle } from "react-icons/fa"

@@ -1,19 +1,22 @@
 /* eslint-disable react/prop-types */
-function ReviewStats({ reviews }) {
-  let average = 0;
 
-  if (reviews && reviews.length > 0) {
-    average = (reviews.reduce((acc, cur) => acc + cur.rating, 0) / reviews.length).toFixed(1);
-  }
 
-  return (
-    <>
-      <div className="review-stats">
-        <p>Reviews: {reviews ? reviews.length : 0}</p>
-        <p>Average: {isNaN(average) ? 0 : average}</p>
-      </div>
-    </>
-  );
+function ReviewStats({reviews}) {
+  // sum of the total reviews rating and divided by the total length of the array and the output is converted to a single decimal place.
+
+  let average = (reviews.reduce((acc, cur) => {
+      return acc + cur.rating}, 0)/reviews.length).toFixed(1)
+
+return (
+  <>
+    <div className="review-stats">
+      <p>Reviews: {reviews.length}</p>
+
+      <p>Average: {isNaN(average) ? 0 : average}</p>
+    
+    </div>
+  </>
+)
 }
 
-export default ReviewStats;
+export default ReviewStats

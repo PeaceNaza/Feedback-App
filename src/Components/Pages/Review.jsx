@@ -13,7 +13,11 @@ function Review() {
   const fetchData = async () => {
     try {
       let fetchedReview = localStorage.getItem("review"); // Get Review from localStorage
-      setReview(JSON.parse(fetchedReview));
+      if (fetchedReview) {
+        setReview(JSON.parse(fetchedReview));
+      } else {
+        setReview(data);
+      }
     } catch (error) {
       console.error("Error loading data:", error);
     }

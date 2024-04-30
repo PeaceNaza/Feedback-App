@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react"
-import Button from "./Layout/Button"
+import Button from "../Components/Layout/Button"
 import Rating from "./Rating"
 
 const spanStyle = {
@@ -9,7 +9,7 @@ const spanStyle = {
   marginTop: '10px'
 }
 
-function ReviewForm({handleAdd, }) {
+function ReviewForm({handleAdd}) {
     // state for input text 
   const [text, setText] = useState('')
 
@@ -62,7 +62,7 @@ const formSubmit = (e) => {
                 <div className="input-group">
                     <input type="text" value={text} placeholder="write your review here" onChange={textHandler} />
                     
-                    <Button type='submit' variant='secondary' isDisabled={btnDisabled} onClick={handleAdd}>
+                    <Button type='submit' variant='secondary' isDisabled={btnDisabled}>
                         Submit
                     </Button>
                 </div>

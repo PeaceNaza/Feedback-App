@@ -1,12 +1,13 @@
+/* eslint-disable react/prop-types */
 
-// eslint-disable-next-line react/prop-types
+
+
 function Button({children, variant, type, isDisabled, onClick}) {
   return (
     <>
-    <button type={type} disabled={isDisabled} onClick={onClick} className={`btn btn-${variant}`}>
-      {children}
-    </button>
-      
+      <button type={type} disabled={isDisabled} onClick={onClick} className={`btn btn-${variant}`}>
+        {children}
+      </button>
     </>
   )
 }
