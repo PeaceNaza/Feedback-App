@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <Header text="Review Application" />
+      <Header text="Feedback Review Application" />
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
