@@ -18,7 +18,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/review" element={<Review />} />
 <Route path="/all-reviews" element={<AllReviews/>} />
-
         </Routes>
       </Router>
 
